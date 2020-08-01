@@ -1,12 +1,15 @@
-﻿using System;
+﻿using System.Threading.Tasks;
+using CliFx;
 
 namespace AzureDevOpsCLI
 {
-    class Program
+    public static class Program
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+        public static async Task<int> Main() =>
+            await new CliApplicationBuilder()
+                .AddCommandsFromThisAssembly()
+                .UseExecutableName("AzureDevOpsCLI.exe")
+                .Build()
+                .RunAsync();
     }
 }
