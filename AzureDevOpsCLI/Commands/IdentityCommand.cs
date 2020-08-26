@@ -5,7 +5,7 @@ using CliFx.Attributes;
 using Microsoft.VisualStudio.Services.Common;
 using Microsoft.VisualStudio.Services.WebApi;
 
-namespace AzureDevOpsCLI
+namespace AzureDevOpsCLI.Commands
 {
     [Command("identity", Description = "Retrieve identity information from Azure DevOps.")]
     public class IdentityCommand : ICommand
